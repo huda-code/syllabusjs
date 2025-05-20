@@ -99,3 +99,52 @@ console.log("Favorite color:", favColor);
 console.log("Reaction:", reaction);
 
 
+
+
+
+
+
+
+
+// ...........................................
+// Ternary operator
+//  if you are hungry, will you eat or wait?
+
+// Syntax: the format the writing the cond.
+// condition ? true : false; 
+
+let isHungry = false;
+let action = isHungry ? "Eat": "wait"; 
+console.log("Hungry:", isHungry );
+console.log("Action:", action); 
+
+
+// try with a condition 
+
+const age = 18;
+const canVote = age >= 18 ? "Yes" : "No";
+console.log("Age:", age);
+console.log("Can Vote?", canVote); // → Yes
+
+// Try with a smaller age:
+
+const age2 = 12;
+const canVote2 = age2 >= 18 ? "Yes" : "No";
+console.log("Age:", age2);
+console.log("Can Vote?", canVote2); // → No
+
+// Try in a sentence
+const items = 0;
+console.log(`You have ${items > 0 ? items : "no"} items in your cart.`); // → You have no items in your cart.
+
+const moreItems = 3;
+console.log(`You have ${moreItems > 0 ? moreItems : "no"} items in your cart.`); // → You have 3 items in your cart.
+
+
+
+const hasPet = true;
+const msg = hasPet ? "you are lucky!": "maybe get one someday!";
+// console.log(hasPet);
+console.log(msg);
+
+
