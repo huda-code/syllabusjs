@@ -8,6 +8,43 @@ Think of them like tools that help you make decisions based on more than one rul
   Logical operators help you ask more than one question.
 Ternary operator helps you choose what to say or do.
 // ....................
+Logical operators let you combine or invert Boolean expressions. They’re fundamental when you need to check multiple conditions or flip a Boolean value.
+1. Overview
+Logical operators let you combine or invert Boolean expressions. They’re fundamental when you need to check multiple conditions or flip a Boolean value.
+
+. && (AND)
+Description:
+- Evaluates to true only if both operands are truthy.
+- Stops and returns the first falsy operand (short-circuit); otherwise returns the last truthy operand.
+
+Truth Table
+A	B	A && B
+true	true	true
+true	false	false
+false	true	false
+false	false	false
+
+3. || (OR)
+Description:
+- Evaluates to true if either operand is truthy.
+- Stops and returns the first truthy operand; otherwise returns the last falsy operand.
+- Widely used for default‐value fallbacks.
+Truth Table
+A	B	A || B
+true	true	true
+true	false	true
+false	true	true
+false	false	false
+
+4. ! (NOT)
+Description:
+- Inverts the Boolean value of its operand.
+- Useful for checking “not” conditions.
+Truth Table
+A	!A
+true	false
+false	true
+
 
 // ..........................
   Here’s a kid-friendly comparison:
