@@ -24,6 +24,32 @@ true	false	false
 false	true	false
 false	false	false
 
+Examples
+let isMember = true;
+let hasPaid  = false;
+
+if (isMember && hasPaid) {
+  console.log("Access granted.");
+} else {
+  console.log("Access denied.");
+}
+// → "Access denied."
+
+// Short-circuit: returns first falsy
+const username = "" && "fallback";
+console.log(username);
+// → ""
+
+// Both must be truthy to proceed
+function submit(order) {
+  if (order && order.items && order.items.length > 0) {
+    console.log("Processing order…");
+  } else {
+    console.log("No valid order found.");
+  }
+}
+
+
 3. || (OR)
 Description:
 - Evaluates to true if either operand is truthy.
@@ -36,6 +62,32 @@ true	false	true
 false	true	true
 false	false	false
 
+Examples
+let isAdmin   = false;
+let isModerator = true;
+
+if (isAdmin || isModerator) {
+  console.log("You may edit this post.");
+}
+// → "You may edit this post."
+
+// Default fallback
+function greet(name) {
+  const displayName = name || "Guest";
+  console.log(Hello, ${displayName}!);
+}
+greet("");      // Hello, Guest!
+greet("Sara");  // Hello, Sara!
+
+// Chain multiple fallbacks
+const config = { timeout: 0 };
+const timeout = config.timeout || 5000;
+console.log(timeout);
+// → 5000
+
+
+
+
 4. ! (NOT)
 Description:
 - Inverts the Boolean value of its operand.
@@ -44,7 +96,26 @@ Truth Table
 A	!A
 true	false
 false	true
+let isOpen = false;
+if (!isOpen) {
+  console.log("Currently closed.");
+}
+// → "Currently closed."
 
+// Double NOT to coerce to Boolean
+const value  = "hello";
+const isValid = !!value;
+console.log(isValid);
+// → true
+
+// Combining with other logic
+let hasToken = false;
+let isLoggedIn = true;
+
+if (isLoggedIn && !hasToken) {
+  console.log("Session active but no token found.");
+}
+// → "Session active but no token found."
 
 // ..........................
   Here’s a kid-friendly comparison:
