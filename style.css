@@ -1,0 +1,20 @@
+body {
+  text-align: center;
+  font-family: Arial, sans-serif;
+  background-color: #e0f7fa;
+}
+
+#balloon {
+  width: 100px;
+  height: 140px;
+  background-color: red;
+  border-radius: 50% 50% 50% 50%;
+  margin: 50px auto;
+  position: relative;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+#balloon:hover {
+  transform: scale(1.1);
+}
